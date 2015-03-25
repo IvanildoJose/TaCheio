@@ -22,19 +22,8 @@ public class TestaComunicacao {
  
 		TestaComunicacao http = new TestaComunicacao();
  
-//		System.out.println("Testing 1 - Send Http GET request");
-//		http.sendGet();
-// 
-//		System.out.println("\nTesting 2 - Send Http POST request");
-//		http.sendPost();
-//		
-//		System.out.println("\nTesting 3 - Send Http POST to SPTRANS");
-//		http.postSPTRANS();
-//		
-//		System.out.println("\nTesting 4 - Send Http GET SPTRANS Lina");
-//		http.getSPTRANS();
 		
-		System.out.println("\nTesting 5 - Send Http GET SPTRANS Linha");
+		System.out.println("\nTesting 5 - Send Http GET SPTRANS");
 		http.testaLinha();		
  
 	}
@@ -268,13 +257,15 @@ public class TestaComunicacao {
 			//url = "http://api.olhovivo.sptrans.com.br/v0/Linha/CarregarDetalhes?codigoLinha=8622};
 			//url = "http://api.olhovivo.sptrans.com.br/v0/Parada/Buscar?termosBusca=Paulista";
 			//url = "http://api.olhovivo.sptrans.com.br/v0/Parada/BuscarParadasPorLinha?codigoLinha=438";
+			//url = "http://api.olhovivo.sptrans.com.br/v0//Posicao?codigoLinha=33461";
+			//url = "http://api.olhovivo.sptrans.com.br/v0//Posicao?codigoLinha=33461";
 			//url = "http://api.olhovivo.sptrans.com.br/v0/Corredor";
 			//url = "http://api.olhovivo.sptrans.com.br/v0/Parada/BuscarParadasPorCorredor?codigoCorredor=10";
 			//url = "http://api.olhovivo.sptrans.com.br/v0/Posicao?codigoLinha=438";
 			//url = "http://api.olhovivo.sptrans.com.br/v0/Previsao/Linha?codigoLinha=438";
 			//url = "http://api.olhovivo.sptrans.com.br/v0/Previsao/Parada?codigoParada=4200953";
 			
-			url = "http://api.olhovivo.sptrans.com.br/v0/Parada/Buscar?termosBusca=Paulista";
+			url = "http://api.olhovivo.sptrans.com.br/v0/Previsao/Linha?codigoLinha=438";
 			
 			//540014154
 			obj = new URL(url);
