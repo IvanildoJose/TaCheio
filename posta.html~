@@ -1,0 +1,9 @@
+<form action="http://localhost:8000" method="post">
+   <p>
+   Name: <input type="text" name="FirstName" value="" size="25" maxlength="50" />
+   </p>
+   <p>
+   Email: <input type="text" name="Email" value="" size="25" maxlength="50" />
+   </p>
+<input type="submit" name="submit" value="Submit" />
+</form>
