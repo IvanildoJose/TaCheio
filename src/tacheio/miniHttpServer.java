@@ -45,9 +45,17 @@ import com.sun.net.httpserver.HttpServer;
 public class miniHttpServer implements HttpHandler{
 	public void handle(HttpExchange t) throws IOException {
 		
-		String response = "This is the response\n";
+		//Aqui já tem um furo: E se recebermos um POST de 50 Giga? A String vai estourar...
+		
+		String response = "Isto e o que voce pediu\n";
+		
+		response = response +"\n" + "PROTOCOLO:" + t.getProtocol() + "\nMETODO: "+ t.getRequestMethod() +"\n" + t.getRequestURI() +"\n";
+		//"RESPONSE CODE (200?):"+ t.getResponseCode() 
 		
 		InputStream is = t.getRequestBody();
+		
+		
+		
 		byte[] b = new byte[1] ;
 		
 	    while (is.read(b) != -1) {
@@ -55,6 +63,20 @@ public class miniHttpServer implements HttpHandler{
 	    	response = response + new String(b);
 	    }
 	    is.close();
+	    
+	    /* Esta solução é escalavel. A solucao acima e lixo!
+	 // Object exists and is a file: accept with response code 200.
+	      t.sendResponseHeaders(200, 0);
+	      OutputStream os = t.getResponseBody();
+	      FileInputStream fs = new FileInputStream(file);
+	      final byte[] buffer = new byte[0x10000];
+	      int count = 0;
+	      while ((count = fs.read(buffer)) >= 0) {
+	        os.write(buffer,0,count);
+	      }
+	      */
+	    
+	    
 		
 		
 		
