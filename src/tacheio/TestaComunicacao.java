@@ -193,6 +193,8 @@ public class TestaComunicacao {
 			//String url = "http://api.olhovivo.sptrans.com.br/v0/Login/Autenticar?token=859eeafda5d87a8a5e96cae06c4125bdc9873ca687b6888b298691dc8e63d615";
 			String url = "http://api.olhovivo.sptrans.com.br/v0/Login/Autenticar?token=859eeafda5d87a8a5e96cae06c4125bdc9873ca687b6888b298691dc8e63d615";
 			
+			
+			
 		    CookieManager manager = new CookieManager();
 		    manager.setCookiePolicy(CookiePolicy.ACCEPT_ALL);
 		    CookieHandler.setDefault(manager);
@@ -201,7 +203,7 @@ public class TestaComunicacao {
 			URL obj = new URL(url);
 			HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 	 
-			//add reuqest header
+			//add request header
 			con.setRequestMethod("POST");
 			con.setRequestProperty("User-Agent", USER_AGENT);
 			//con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
