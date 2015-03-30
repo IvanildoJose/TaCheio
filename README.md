@@ -1,9 +1,10 @@
 ![Ta Cheio](/ifsp_logo.png)
 
-### TaCheio
+### TaCheio ###
 
 Projeto MAE(Metodologia de Análise Estruturada de Sistemas) IFSP 2015
 
-### About - Sobre
+### About - Sobre ###
 
 Vamos começar com os documentos, códigos etc.
+-Anotações das discussões
